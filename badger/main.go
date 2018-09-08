@@ -19,8 +19,6 @@ package main
 import (
 	"fmt"
 	"net/http"
-	_ "net/http/pprof"
-	"runtime"
 
 	"github.com/dgraph-io/badger/badger/cmd"
 )
@@ -36,6 +34,5 @@ func main() {
 			}
 		}
 	}()
-	runtime.SetBlockProfileRate(100)
 	cmd.Execute()
 }
